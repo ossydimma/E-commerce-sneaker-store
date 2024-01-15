@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectCount } from "../util/features/count";
+import menu from "../images/icon-menu.svg"
+import closeMenu from "../images/icon-close.svg"
 interface MyComponentProps {
   isShow: boolean;
   setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,7 +34,7 @@ function Navbar({ isShow, setIsShow }: MyComponentProps) {
           </div>
           <div onClick={showSideBar}>
             <img
-              src="/src/images/icon-menu.svg"
+              src={menu}
               className="bar-icon"
               alt="bar icon"
             />
@@ -40,7 +42,7 @@ function Navbar({ isShow, setIsShow }: MyComponentProps) {
           {showNav && (
             <ul>
               <img
-                src="/src/images/icon-close.svg"
+                src={closeMenu}
                 alt="icon-close"
                 onClick={hideSideBar}
               />

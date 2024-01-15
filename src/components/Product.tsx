@@ -2,6 +2,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCount, increment, decrement } from "../util/features/count";
+import product1 from '../images/image-product-1.jpg'
+import product2 from '../images/image-product-2.jpg'
+import product3 from '../images/image-product-3.jpg'
+import product4 from '../images/image-product-4.jpg'
+import productT1 from '../images/image-product-1-thumbnail.jpg'
+import productT2 from '../images/image-product-2-thumbnail.jpg'
+import productT3 from '../images/image-product-3-thumbnail.jpg'
+import productT4 from '../images/image-product-4-thumbnail.jpg'
 
 // Import Swiper styles
 import "swiper/css";
@@ -49,16 +57,16 @@ function swiper({  setIsShow }: MyComponentProps) {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="/src/images/image-product-1.jpg" alt="product image" />
+              <img src={product1} alt="product image" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/src/images/image-product-2.jpg" alt="product image" />
+              <img src={product2} alt="product image" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/src/images/image-product-3.jpg" alt="product image" />
+              <img src={product3} alt="product image" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/src/images/image-product-4.jpg" alt="product image" />
+              <img src={product4} alt="product image" />
             </SwiperSlide>
           </Swiper>
           <Swiper
@@ -72,25 +80,25 @@ function swiper({  setIsShow }: MyComponentProps) {
           >
             <SwiperSlide>
               <img
-                src="/src/images/image-product-1-thumbnail.jpg"
+                src={productT1}
                 alt="product image"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/src/images/image-product-2-thumbnail.jpg"
+                src={productT2}
                 alt="product image"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/src/images/image-product-3-thumbnail.jpg"
+                src={productT3}
                 alt="product image"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/src/images/image-product-4-thumbnail.jpg"
+                src={productT4}
                 alt="product image"
               />
             </SwiperSlide>
