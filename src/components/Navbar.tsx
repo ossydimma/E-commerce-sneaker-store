@@ -5,6 +5,10 @@ import menu from "../images/icon-menu.svg"
 import closeMenu from "../images/icon-close.svg"
 import dp from "../images/image-avatar.png"
 import cart from '../images/icon-cart.svg'
+import product1 from '../images/image-product-1.jpg'
+import delIcon from '../images/icon-delete.svg'
+
+
 interface MyComponentProps {
   isShow: boolean;
   setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
@@ -81,7 +85,7 @@ function Navbar({ isShow, setIsShow }: MyComponentProps) {
                 <div className="cart-content">
                   <div className="cart-content-image">
                     <img
-                      src="/src/images/image-product-1.jpg"
+                      src={product1}
                       alt="product image"
                     />
                   </div>
@@ -93,7 +97,7 @@ function Navbar({ isShow, setIsShow }: MyComponentProps) {
                         <strong>${125.0 * count}</strong>
                       </div>
                       <img
-                        src="/src/images/icon-delete.svg"
+                        src={delIcon}
                         alt="delete icon"
                         onClick={() => setIsShow(false)}
                         style={{ cursor: "pointer" }}
