@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { selectCount } from "../util/features/count";
 import menu from "../images/icon-menu.svg"
 import closeMenu from "../images/icon-close.svg"
+import dp from "../images/image-avatar.png"
+import cart from '../images/icon-cart.svg'
 interface MyComponentProps {
   isShow: boolean;
   setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
@@ -115,10 +117,10 @@ function Navbar({ isShow, setIsShow }: MyComponentProps) {
             }}
           >
             {isShow && <p>1</p>}
-            <img src="/src/images/icon-cart.svg" alt="cart" />
+            <img src={cart} alt="cart" />
           </div>
           <div>
-            <img src="/src//images/image-avatar.png" alt="dp" />
+            <img src={dp} alt="dp" />
           </div>
         </div>
       </div>

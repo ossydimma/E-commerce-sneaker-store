@@ -10,6 +10,8 @@ import productT1 from '../images/image-product-1-thumbnail.jpg'
 import productT2 from '../images/image-product-2-thumbnail.jpg'
 import productT3 from '../images/image-product-3-thumbnail.jpg'
 import productT4 from '../images/image-product-4-thumbnail.jpg'
+import minuIcon from "../images/icon-minus.svg"
+import plusIcon from "../images/icon-plus.svg"
 
 // Import Swiper styles
 import "swiper/css";
@@ -136,7 +138,7 @@ function swiper({  setIsShow }: MyComponentProps) {
                   if (count > 0) dispatch(decrement());
                 }}
               >
-                <img src="/src/images/icon-minus.svg" alt="minus icon" />
+                <img src={minuIcon} alt="minus icon" />
               </div>
               <p>{count}</p>
               <div
@@ -144,7 +146,7 @@ function swiper({  setIsShow }: MyComponentProps) {
                   dispatch(increment());
                 }}
               >
-                <img src="/src/images/icon-plus.svg" alt="plus icon" />
+                <img src={plusIcon} alt="plus icon" />
               </div>
             </div>
 
