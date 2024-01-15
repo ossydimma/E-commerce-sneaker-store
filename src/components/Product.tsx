@@ -12,6 +12,8 @@ import productT3 from '../images/image-product-3-thumbnail.jpg'
 import productT4 from '../images/image-product-4-thumbnail.jpg'
 import minuIcon from "../images/icon-minus.svg"
 import plusIcon from "../images/icon-plus.svg"
+import cart from '../images/icon-cart.svg'
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -162,7 +164,7 @@ function swiper({  setIsShow }: MyComponentProps) {
                     }
                   }}
                 >
-                  <img src="/src/images/icon-cart.svg" alt="cart icon" />
+                  <img src={cart} alt="cart icon" />
                   Add to cart
                 </button>
               </div>
