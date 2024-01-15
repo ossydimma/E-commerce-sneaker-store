@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount, increment, decrement } from "../util/features/count";
+import { selectCount, increment, decrement,numb } from "../util/features/count";
 import product1 from '../images/image-product-1.jpg'
 import product2 from '../images/image-product-2.jpg'
 import product3 from '../images/image-product-3.jpg'
@@ -30,7 +30,7 @@ interface MyComponentProps {
 }
 
 function swiper({  setIsShow }: MyComponentProps) {
-  const count = useSelector(selectCount);
+  let count = useSelector(selectCount);
   const [showFeedBack, setShowFeedBack] = useState(false);
   const dispatch = useDispatch();
   const [thumbsSwiper] = useState(null);
@@ -161,6 +161,7 @@ function swiper({  setIsShow }: MyComponentProps) {
                     } else {
                       setIsShow(true);
                       setShowFeedBack(false);
+                      if (count > 0) dispatch(numb())
                     }
                   }}
                 >
